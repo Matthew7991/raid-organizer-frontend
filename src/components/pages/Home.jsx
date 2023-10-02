@@ -14,7 +14,7 @@ function Home() {
           />
         </div>
       </section>
-      <section className="px-20 py-12 min-h-screen flex items-center bg-greenmiddle">
+      <section className="flex items-center min-h-screen px-20 py-12 bg-greenmiddle">
         <div className="flex gap-32">
           <img
             src="./assets/imgs/ranger.png"
