@@ -1,11 +1,17 @@
 import React from "react"
 import Heading from "../shared/Heading"
 import P from "../shared/P"
+import { Link } from "react-router-dom"
 
 function Home() {
   return (
     <main>
       <section className="min-h-screen bg-[url(../assets/imgs/hero.png)] bg-no-repeat bg-cover relative">
+        <Link
+          to={"/login"}
+          className="absolute px-4 py-2 text-2xl text-white rounded-full top-8 right-8 bg-greenmiddle">
+          Login
+        </Link>
         <div className="absolute bottom-1/4 left-40">
           <Heading
             text="Plan your"

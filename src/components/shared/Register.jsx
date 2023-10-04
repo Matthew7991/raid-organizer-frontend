@@ -1,33 +1,32 @@
 import React, { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
-function Login() {
+function Register() {
   const [error, setError] = useState(false)
   const navigate = useNavigate()
 
-  const login = async (event) => {
+  const register = async (event) => {
     event.preventDefault()
 
     const formData = new FormData(event.target)
     const response = await fetch(
-      import.meta.env.VITE_API_URL + "/api/auth/login",
+      import.meta.env.VITE_API_URL + "/api/auth/register",
       {
         method: "POST",
         body: formData,
       }
     )
     if (!response.ok) return setError(true)
-    const data = await response.json()
-    localStorage.setItem("token", data)
-    navigate("/dashboard")
+    console.log(response)
+    navigate("/login")
   }
 
   return (
     <>
       <form
-        onSubmit={login}
+        onSubmit={register}
         className="flex flex-col gap-4">
-        {error && <output>Login failed.</output>}
+        {error && <output>Register failed.</output>}
         <div className="flex flex-col gap-2">
           <label htmlFor="username">Username</label>
           <input
@@ -47,14 +46,14 @@ function Login() {
           />
         </div>
         <Link
-          to={"/register"}
+          to={"/login"}
           className="underline">
-          Don't have an account yet?
+          Already have an account yet?
         </Link>
-        <button className="w-fit">Login</button>
+        <button className="w-fit">Register</button>
       </form>
     </>
   )
 }
 
-export default Login
+export default Register
