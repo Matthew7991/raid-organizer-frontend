@@ -7,6 +7,8 @@ import Login from "./components/shared/Login"
 import Register from "./components/shared/Register"
 import Protected from "./components/shared/Protected"
 import Dashboard from "./components/pages/Dashboard"
+import CharacterForm from "./components/shared/CharacterForm"
+import Characters from "./components/pages/Characters"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -28,6 +30,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route
             path="/dashboard"
             element={<Dashboard />}
+          />
+          <Route
+            path="/dashboard/characters"
+            element={<Characters />}
           />
         </Route>
       </Routes>

@@ -17,7 +17,7 @@ function Register() {
       }
     )
     if (!response.ok) return setError(true)
-    console.log(response)
+    // console.log(response)
     navigate("/login")
   }
 

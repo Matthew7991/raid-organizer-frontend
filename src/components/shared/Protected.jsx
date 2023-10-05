@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, Outlet } from "react-router-dom"
+import NavbarDashboard from "./NavbarDashboard"
 
 function Protected() {
   const navigate = useNavigate()
@@ -18,7 +19,13 @@ function Protected() {
     }
     check()
   }, [])
-  return <>{auth && <Outlet />}</>
+
+  return (
+    <main className="flex min-h-screen gap-8 text-white bg-greenmiddle">
+      <NavbarDashboard />
+      {auth && <Outlet />}
+    </main>
+  )
 }
 
 export default Protected
