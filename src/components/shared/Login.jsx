@@ -14,7 +14,6 @@ function Login() {
           headers: { authorization: "Bearer " + localStorage.getItem("token") },
         }
       )
-      if (response.status === 401) return navigate("/login")
       if (response.ok) navigate("/dashboard")
       else setShowLogin(true)
     }
