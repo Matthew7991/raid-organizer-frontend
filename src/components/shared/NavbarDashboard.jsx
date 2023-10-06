@@ -6,6 +6,7 @@ function NavbarDashboard() {
     <nav className="flex flex-col gap-4 px-4 bg-darkgreen">
       <NavLink to={"/dashboard"}>Dashboard</NavLink>
       <NavLink to={"/dashboard/characters"}>Characters</NavLink>
+      <NavLink to={"/dashboard/party"}>Party</NavLink>
     </nav>
   )
 }

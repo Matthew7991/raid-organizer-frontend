@@ -9,6 +9,7 @@ import Protected from "./components/shared/Protected"
 import Dashboard from "./components/pages/Dashboard"
 import CharacterForm from "./components/shared/CharacterForm"
 import Characters from "./components/pages/Characters"
+import Party from "./components/pages/Party"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -34,6 +35,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route
             path="/dashboard/characters"
             element={<Characters />}
+          />
+          <Route
+            path="/dashboard/party"
+            element={<Party />}
           />
         </Route>
       </Routes>
